@@ -1,0 +1,139 @@
+ChromHMM
+
+server: ssh Students@buratino.autosome.ru
+password: crocoziabr
+
+
+chromHMM file downloads
+
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k04me1AlnRep1.bam
+
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k04me2AlnRep1.bam
+
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k04me3AlnRep1.bam
+
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k09me3AlnRep1.bam
+
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k27acAlnRep1.bam
+
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k27me3AlnRep1.bam
+
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k09acAlnRep1.bam
+
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k36me3AlnRep1.bam
+
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H3k79me2AlnRep1.bam
+
+http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeBroadHistone/wgEncodeBroadHistoneDnd41H4k20me1AlnRep1.bam
+
+
+
+
+codes:
+
+java -mx1600M -jar ChromHMM.jar BinarizeBam CHROMSIZES\hg18.txt INPUTBAMFILES cellmarkfile.txt SAMPLEDATA_HG18
+
+java -mx1600M -jar ChromHMM.jar BinarizeBam CHROMSIZES\hg18.txt Home cellmarkfile.txt SAMPLEDATA_HG18
+
+
+
+java -mx1600M -jar ChromHMM.jar LearnModel -p 0 SAMPLEDATA HG18 OUTPUTSAMPLE 10 gh18
+
+
+ln -s ~/soft/ChromHMM/ChromHMM.jar
+ln -s ~/soft/ChromHMM/CHROMSIZES
+
+
+/home/deborah/wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+
+/home/deborah/wgEncodeBroadHistoneDnd41H3k04me1AlnRep1.bam
+
+/home/deborah/wgEncodeBroadHistoneDnd41H3k04me2AlnRep1.bam
+
+/home/deborah/wgEncodeBroadHistoneDnd41H3k04me3AlnRep1.bam
+
+/home/deborah/wgEncodeBroadHistoneDnd41H3k09acAlnRep1.bam
+
+/home/deborah/wgEncodeBroadHistoneDnd41H3k09me3AlnRep1.bam
+
+/home/deborah/wgEncodeBroadHistoneDnd41H3k27acAlnRep1.bam
+
+/home/deborah/wgEncodeBroadHistoneDnd41H3k27me3AlnRep1.bam
+
+/home/deborah/wgEncodeBroadHistoneDnd41H3k36me3AlnRep1.bam
+
+/home/deborah/wgEncodeBroadHistoneDnd41H3k79me2AlnRep1.bam
+
+/home/deborah/wgEncodeBroadHistoneDnd41H4k20me1AlnRep1.bam
+
+
+cellmarkfiletable.txt
+Dnd41	H3k04	wgEncodeBroadHistoneDnd41H3k04me1AlnRep1.bam
+	wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+Dnd41	H3k04	wgEncodeBroadHistoneDnd41H3k04me2AlnRep1.bam
+	wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+Dnd41	H3k04	wgEncodeBroadHistoneDnd41H3k04me3AlnRep1.bam	
+	wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+Dnd41	H3k09	wgEncodeBroadHistoneDnd41H3k09acAlnRep1.bam
+	wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+Dnd41	H3k09	wgEncodeBroadHistoneDnd41H3k09me3AlnRep1.bam
+	wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+Dnd41	H3k27	wgEncodeBroadHistoneDnd41H3k27acAlnRep1.bam
+	wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+Dnd41	H3k27	wgEncodeBroadHistoneDnd41H3k27me3AlnRep1.bam
+	wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+Dnd41	H3k36	wgEncodeBroadHistoneDnd41H3k36me3AlnRep1.bam		
+	wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+Dnd41	H3k79	wgEncodeBroadHistoneDnd41H3k79me2AlnRep1.bam
+	wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+Dnd41	H4k20	wgEncodeBroadHistoneDnd41H4k20me1AlnRep1.bam
+	wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam
+
+
+	
+java -mx5000M -jar ChromHMM.jar BinarizeBam -b 200 CHROMSIZES/hg19.txt data cellmarkfiletable.txt binarizedData
+
+java -mx1200M -jar ChromHMM.jar LearnModel binarizedData learn//model 10 hg19
+
+
+BinarizeBam -b 200 -c ~/DeborahOganyaOgenyi/OMICS4/Dnd41_control.bam
+
+java -mx5000M -jar ~/DeborahOganyaOgenyi/OMICS4/chromm/ChromHMM.jar BinarizeBam -b 200  ~/DeborahOganyaOgenyi/OMICS4/chromm/CHROMSIZES/hg19.txt ~/DeborahOganyaOgenyi/OMICS4/chip_seq ~/DeborahOganyaOgenyi/OMICS4/cellmarkfiletable.txt   ~/DeborahOganyaOgenyi/OMICS4/binarizedData
+
+
+screen -S layallearn2 java -mx5000M -jar ~/layal/OMICS4/chromm/ChromHMM.jar LearnModel -b 200 ~/layal/OMICS4/binarizedData ~/layal/OMICS4/learnmodel3 10 hg19
+
+
+wgEncodeBroadHistoneDnd41ControlStdAlnRep1.bam  wgEncodeBroadHistoneDnd41H3k04me2AlnRep1.bam  wgEncodeBroadHistoneDnd41H3k27acAlnRep1.bam   wgEncodeBroadHistoneDnd41H4k20me1AlnRep1.bam
+wgEncodeBroadHistoneDnd41H2azAlnRep1.bam        wgEncodeBroadHistoneDnd41H3k04me3AlnRep1.bam  wgEncodeBroadHistoneDnd41H3k27me3AlnRep1.bam  wget-log
+wgEncodeBroadHistoneDnd41H3k04me1AlnRep1.bam    wgEncodeBroadHistoneDnd41H3k09acAlnRep1.bam   wgEncodeBroadHistoneDnd41H3k36me3AlnRep1.bam
+wgEncodeBroadHistoneDnd41H3k04me1AlnRep1.bam.1  wgEncodeBroadHistoneDnd41H3k09me3AlnRep1.bam  wgEncodeBroadHistoneDnd41H3k79me2AlnRep1.bam
+
+
+Figshare files:
+http://figshare.com/articles/dataset/Untitled_Item/20311830?file=36285672
+
+https://figshare.com/articles/dataset/Untitled_Item/20311830?file=36285675
+
+https://figshare.com/articles/dataset/Untitled_Item/20311830?file=36285678
+
+https://figshare.com/articles/dataset/Untitled_Item/20311830?file=36285681
+
+IGV FILES:
+2022-07-14 12:40:17 INFO  IGV:1345 - Loading 1 resources.
+2022-07-14 12:40:17 INFO  TrackLoader:122 - Loading resource, path /home/deborah/Downloads/Dnd41_10_dense.bed
+2022-07-14 12:40:39 INFO  IGV:1345 - Loading 1 resources.
+2022-07-14 12:40:39 INFO  TrackLoader:122 - Loading resource, path /home/deborah/Downloads/Dnd41_10_dense.bed.fai
+2022-07-14 12:40:39 INFO  MessageUtils:76 - <html>Unknown file type: /home/deborah/Downloads/Dnd41_10_dense.bed.fai<br>Check file extension
+2022-07-14 12:40:51 INFO  IGV:1345 - Loading 1 resources.
+2022-07-14 12:40:51 INFO  TrackLoader:122 - Loading resource, path /home/deborah/Downloads/Dnd41_10_dense.bed.txt
+2022-07-14 12:41:10 INFO  IGV:1345 - Loading 1 resources.
+2022-07-14 12:41:10 INFO  TrackLoader:122 - Loading resource, path /home/deborah/Downloads/Dnd41_10_expanded.bed.txt
+2022-07-14 12:41:24 INFO  IGV:1345 - Loading 1 resources.
+2022-07-14 12:41:24 INFO  TrackLoader:122 - Loading resource, path /home/deborah/Downloads/Dnd41_10_segments.bed.txt
+
+
+
+	
